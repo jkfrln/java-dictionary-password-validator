@@ -1,3 +1,19 @@
 #summary This provides some quick code examples on how to use this library.
 
-= Details =
+= Sample Usage =
+
+== Password Validation ==
+{{{
+ DictionaryPasswordValidator pDV = DictionaryPasswordValidator.getInstance();
+ if(pDV.isPasswordDictionaryBased("Pa8!ss9wo4rd2") == true) {
+     System.out.println("Password contains a dictionary word!");
+ } else {
+     System.out.println("Password is valid.");
+ }
+}}}
+
+== Dictionary Look up ==
+{{{
+ DictionaryPasswordValidator pDV = DictionaryPasswordValidator.getInstance();
+ pDV.isDictionaryWord("word");
+}}}
