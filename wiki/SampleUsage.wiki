@@ -2,6 +2,13 @@
 
 = Sample Usage =
 
+== Initial Configuration ==
+This has to be called prior to any getInstance() calls.  So, if you're developing a web app, you should call this when your servlet container starts up.  It only needs to be called once, and the default is 2 specials, 2 lower, 2 upper, and 2 numerics.
+{{{
+    DictionaryPasswordValidator.configure(fill_out_options_here);
+}}}
+
+
 == Password Validation ==
 {{{
  DictionaryPasswordValidator pDV = DictionaryPasswordValidator.getInstance();
